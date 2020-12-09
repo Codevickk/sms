@@ -8,10 +8,27 @@ nav.navbar-default {
     border: none;
 }
 
+.navbar-brand {
+    color: rgb(34, 34, 34) !important;
+    /* font-weight: 700 !important; */
+}
+
 .main-panel .content {
     margin-top: 20px;
 }
 
 .main-panel .content .alert {
     margin-bottom: 0;
+}
+
+.alert-blue {
+    background-color: #1631c9 !important;
+}
+
+.alert-blue button.close {
+    color: #eeeeee;
+}
+
+.icon-blue {
+    color: #1631c9;
 }

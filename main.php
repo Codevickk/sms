@@ -7,7 +7,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-warning text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-user"></i>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-success text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-wallet"></i>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-danger text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-credit-card"></i>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-info text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-id-badge"></i>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-warning text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-harddrives"></i>
                                         </div>
                                     </div>
@@ -145,7 +145,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-success text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-crown"></i>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-warning text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-layers-alt"></i>
                                         </div>
                                     </div>
@@ -202,7 +202,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-info text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-home"></i>
                                         </div>
                                     </div>
@@ -256,7 +256,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-primary text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-cup"></i>
                                         </div>
                                     </div>
@@ -311,7 +311,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-warning text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-user"></i>
                                         </div>
                                     </div>
@@ -338,7 +338,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-success text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-tag"></i>
                                         </div>
                                     </div>
@@ -365,7 +365,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-danger text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-key"></i>
                                         </div>
                                     </div>
@@ -392,7 +392,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-info text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-bar-chart-alt"></i>
                                         </div>
                                     </div>
@@ -422,7 +422,7 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-5">
-                                        <div class="icon-big icon-danger text-center">
+                                        <div class="icon-big icon-blue text-center">
                                             <i class="ti-write"></i>
                                         </div>
                                     </div>
@@ -444,7 +444,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                    <!-- <div class="col-lg-3 col-sm-6">
                         <div class="card">
                             <div class="content">
                                 <div class="row">
@@ -456,7 +456,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p><strong>StudentTypes</strong></p>
-                                            <?php countrecords("studentcategories"); ?>
+                                            <?  // php countrecords("studentcategories"); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -470,7 +470,7 @@
                             </a>
                             </div>
                         </div>
-                    </div>row ends
+                    </div>row ends -->
                 </div>
                  <div style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
                      <?php include("slides.php"); ?>
@@ -547,7 +547,7 @@
             	message: "Welcome to <b> School Management System admin</b> - a beautiful system for managing your school."
 
             },{
-                type: 'success',
+                type: 'blue',
                 timer: 3000
             });
 

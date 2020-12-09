@@ -32,7 +32,7 @@
 		"IF(    CHAR_LENGTH(`streams1`.`Name`), CONCAT_WS('',   `streams1`.`Name`), '') /* Stream */" => "Stream",
 		"IF(    CHAR_LENGTH(`hostels1`.`Name`), CONCAT_WS('',   `hostels1`.`Name`), '') /* Hostel */" => "Hostel",
 		"if(`students`.`DOJ`,date_format(`students`.`DOJ`,'%m/%d/%Y'),'')" => "DOJ",
-		"IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
+		// "IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
 		"IF(    CHAR_LENGTH(`sessions1`.`Year`) || CHAR_LENGTH(`sessions1`.`Term`), CONCAT_WS('',   `sessions1`.`Year`, ' :Term ', `sessions1`.`Term`), '') /* AcademicYear */" => "AcademicYear",
 		"IF(    CHAR_LENGTH(`schoolmoney1`.`Total`), CONCAT_WS('',   `schoolmoney1`.`Total`), '') /* TotalFees */" => "TotalFees",
 		"`students`.`AdvanceFees`" => "AdvanceFees",
@@ -51,7 +51,7 @@
 		8 => '`streams1`.`Name`',
 		9 => '`hostels1`.`Name`',
 		10 => '`students`.`DOJ`',
-		11 => '`studentcategories1`.`Name`',
+		// 11 => '`studentcategories1`.`Name`',
 		12 => 12,
 		13 => '`schoolmoney1`.`Total`',
 		14 => '`students`.`AdvanceFees`',
@@ -71,7 +71,7 @@
 		"IF(    CHAR_LENGTH(`streams1`.`Name`), CONCAT_WS('',   `streams1`.`Name`), '') /* Stream */" => "Stream",
 		"IF(    CHAR_LENGTH(`hostels1`.`Name`), CONCAT_WS('',   `hostels1`.`Name`), '') /* Hostel */" => "Hostel",
 		"if(`students`.`DOJ`,date_format(`students`.`DOJ`,'%m/%d/%Y'),'')" => "DOJ",
-		"IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
+		// "IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
 		"IF(    CHAR_LENGTH(`sessions1`.`Year`) || CHAR_LENGTH(`sessions1`.`Term`), CONCAT_WS('',   `sessions1`.`Year`, ' :Term ', `sessions1`.`Term`), '') /* AcademicYear */" => "AcademicYear",
 		"IF(    CHAR_LENGTH(`schoolmoney1`.`Total`), CONCAT_WS('',   `schoolmoney1`.`Total`), '') /* TotalFees */" => "TotalFees",
 		"`students`.`AdvanceFees`" => "AdvanceFees",
@@ -89,7 +89,7 @@
 		"IF(    CHAR_LENGTH(`streams1`.`Name`), CONCAT_WS('',   `streams1`.`Name`), '') /* Stream */" => "Stream",
 		"IF(    CHAR_LENGTH(`hostels1`.`Name`), CONCAT_WS('',   `hostels1`.`Name`), '') /* Hostel */" => "Hostel",
 		"`students`.`DOJ`" => "DOJ",
-		"IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
+		// "IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
 		"IF(    CHAR_LENGTH(`sessions1`.`Year`) || CHAR_LENGTH(`sessions1`.`Term`), CONCAT_WS('',   `sessions1`.`Year`, ' :Term ', `sessions1`.`Term`), '') /* AcademicYear */" => "AcademicYear",
 		"IF(    CHAR_LENGTH(`schoolmoney1`.`Total`), CONCAT_WS('',   `schoolmoney1`.`Total`), '') /* TotalFees */" => "TotalFees",
 		"`students`.`AdvanceFees`" => "AdvanceFees",
@@ -108,7 +108,7 @@
 		"IF(    CHAR_LENGTH(`streams1`.`Name`), CONCAT_WS('',   `streams1`.`Name`), '') /* Stream */" => "Stream",
 		"IF(    CHAR_LENGTH(`hostels1`.`Name`), CONCAT_WS('',   `hostels1`.`Name`), '') /* Hostel */" => "Hostel",
 		"if(`students`.`DOJ`,date_format(`students`.`DOJ`,'%m/%d/%Y'),'')" => "DOJ",
-		"IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
+		// "IF(    CHAR_LENGTH(`studentcategories1`.`Name`), CONCAT_WS('',   `studentcategories1`.`Name`), '') /* Category */" => "Category",
 		"IF(    CHAR_LENGTH(`sessions1`.`Year`) || CHAR_LENGTH(`sessions1`.`Term`), CONCAT_WS('',   `sessions1`.`Year`, ' :Term ', `sessions1`.`Term`), '') /* AcademicYear */" => "AcademicYear",
 		"IF(    CHAR_LENGTH(`schoolmoney1`.`Total`), CONCAT_WS('',   `schoolmoney1`.`Total`), '') /* TotalFees */" => "TotalFees",
 		"`students`.`AdvanceFees`" => "AdvanceFees",
@@ -117,9 +117,9 @@
 	);
 
 	// Lookup fields that can be used as filterers
-	$x->filterers = array(  'Class' => 'Class', 'Stream' => 'Stream', 'Hostel' => 'Hostel', 'Category' => 'Category', 'AcademicYear' => 'AcademicYear', 'TotalFees' => 'TotalFees', 'Parent' => 'Parent');
+	$x->filterers = array(  'Class' => 'Class', 'Stream' => 'Stream', 'Hostel' => 'Hostel', 'AcademicYear' => 'AcademicYear', 'TotalFees' => 'TotalFees', 'Parent' => 'Parent');
 
-	$x->QueryFrom = "`students` LEFT JOIN `classes` as classes1 ON `classes1`.`id`=`students`.`Class` LEFT JOIN `streams` as streams1 ON `streams1`.`id`=`students`.`Stream` LEFT JOIN `hostels` as hostels1 ON `hostels1`.`id`=`students`.`Hostel` LEFT JOIN `studentcategories` as studentcategories1 ON `studentcategories1`.`id`=`students`.`Category` LEFT JOIN `sessions` as sessions1 ON `sessions1`.`id`=`students`.`AcademicYear` LEFT JOIN `schoolmoney` as schoolmoney1 ON `schoolmoney1`.`id`=`students`.`TotalFees` LEFT JOIN `parents` as parents1 ON `parents1`.`id`=`students`.`Parent` ";
+	$x->QueryFrom = "`students` LEFT JOIN `classes` as classes1 ON `classes1`.`id`=`students`.`Class` LEFT JOIN `streams` as streams1 ON `streams1`.`id`=`students`.`Stream` LEFT JOIN `hostels` as hostels1 ON `hostels1`.`id`=`students`.`Hostel` LEFT JOIN `sessions` as sessions1 ON `sessions1`.`id`=`students`.`AcademicYear` LEFT JOIN `schoolmoney` as schoolmoney1 ON `schoolmoney1`.`id`=`students`.`TotalFees` LEFT JOIN `parents` as parents1 ON `parents1`.`id`=`students`.`Parent` ";
 	$x->QueryWhere = '';
 	$x->QueryOrder = '';
 
@@ -149,9 +149,9 @@
 	$x->DefaultSortDirection = 'desc';
 
 	$x->ColWidth   = array(  150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150);
-	$x->ColCaption = array("FullName", "Gender", "Death Of Birth", "Photo", "RegNo", "Class", "Stream", "Hostel", "DOJ", "Category", "AcademicYear", "TotalFees", "AdvanceFees", "Balance", "Parent");
-	$x->ColFieldName = array('FullName', 'Gender', 'DOB', 'Photo', 'RegNo', 'Class', 'Stream', 'Hostel', 'DOJ', 'Category', 'AcademicYear', 'TotalFees', 'AdvanceFees', 'Balance', 'Parent');
-	$x->ColNumber  = array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+	$x->ColCaption = array("FullName", "Gender", "Death Of Birth", "Photo", "RegNo", "Class", "Stream", "Hostel", "DOJ", "AcademicYear", "TotalFees", "AdvanceFees", "Balance", "Parent");
+	$x->ColFieldName = array('FullName', 'Gender', 'DOB', 'Photo', 'RegNo', 'Class', 'Stream', 'Hostel', 'DOJ', 'AcademicYear', 'TotalFees', 'AdvanceFees', 'Balance', 'Parent');
+	$x->ColNumber  = array(2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16);
 
 	// template paths below are based on the app main directory
 	$x->Template = 'templates/students_templateTV.html';
