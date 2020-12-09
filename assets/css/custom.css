@@ -1,0 +1,17 @@
+#logo {
+    height: auto; 
+    max-width: 100%; 
+    display: inline-block; 
+}
+
+nav.navbar-default {
+    border: none;
+}
+
+.main-panel .content {
+    margin-top: 20px;
+}
+
+.main-panel .content .alert {
+    margin-bottom: 0;
+}
